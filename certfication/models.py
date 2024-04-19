@@ -4,9 +4,9 @@ from main.models import BaseModel, ActiveModel
 
 
 class CompanyCertificate(BaseModel, ActiveModel):
-    title = models.CharField(max_length=255, verbose_name=_("title"))
+    title = models.CharField(max_length=200, verbose_name=_("title"))
     certificate = models.ImageField(upload_to="company_certificate/images/", verbose_name=_("certificate"))
-    sub_title = models.CharField(max_length=255, verbose_name=_("sub_title"))
+    sub_title = models.CharField(max_length=200, verbose_name=_("sub_title"))
     text = models.TextField(verbose_name=_("text"))
 
     class Meta:

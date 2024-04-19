@@ -5,10 +5,10 @@ from main.models import BaseModel, ActiveModel
 
 
 class News(BaseModel, ActiveModel):
-    title = models.CharField(max_length=255, verbose_name=_("title"))
-    sub_title = models.CharField(max_length=255, verbose_name=_("sub title"))
+    title = models.CharField(max_length=200, verbose_name=_("title"))
+    sub_title = models.CharField(max_length=200, verbose_name=_("sub title"))
     cover = models.ImageField(upload_to="news/cover/")
-    slug = models.SlugField(max_length=255, verbose_name=_("slug"))
+    slug = models.SlugField(max_length=200, verbose_name=_("slug"))
     text = models.TextField(verbose_name=_("text"))
 
     class Meta:
